@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Pacifico&family=Caveat:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Quicksand", "Inter", sans-serif;
+  --font-cursive: "Pacifico", "Caveat", cursive;
+  --font-handwritten: "Caveat", cursive;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-invite-pink: #F2C2C9;
+  --color-invite-pink-light: #FDF4F5;
+  --color-invite-pink-dark: #E296A3;
+  --color-invite-beige: #EFE7D8;
+  --color-invite-beige-light: #FAF6F0;
+  --color-invite-beige-dark: #D3C2AD;
+  --color-invite-green: #CBD7C2;
+  --color-invite-green-light: #F3F6F1;
+  --color-invite-green-dark: #8BA17F;
+  --color-invite-text: #4F4941;
+
+  --color-brand-pink: #F2C2C9;
+  --color-brand-pink-light: #FDF4F5;
+  --color-brand-pink-dark: #E296A3;
+  --color-brand-beige: #EFE7D8;
+  --color-brand-beige-light: #FAF6F0;
+  --color-brand-beige-dark: #D3C2AD;
+  --color-brand-green: #CBD7C2;
+  --color-brand-green-light: #F3F6F1;
+  --color-brand-green-dark: #8BA17F;
+  --color-brand-text: #4F4941;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-invite-beige-light);
+    color: var(--color-invite-text);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom sparkly star animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Pulse soft */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+/* Fade-in up scroll animation classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-out;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

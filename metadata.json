@@ -1,0 +1,6 @@
+{
+  "name": "Invitación de Olivia",
+  "description": "Invitación digital e interactiva para el cumpleaños de Olivia en tonos rosa, beige y verde claro, con cuenta regresiva, confirmación de asistencia y mapa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
